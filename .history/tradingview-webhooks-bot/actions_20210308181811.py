@@ -96,5 +96,5 @@ if __name__ == '__main__':
     data = {
     "side": "buy",
     "symbol": "DOTUSDTPERP"}
-    #send_order(data)
+    send_order(data)
 

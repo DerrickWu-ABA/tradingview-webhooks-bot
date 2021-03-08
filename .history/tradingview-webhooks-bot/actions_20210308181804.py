@@ -95,6 +95,6 @@ def send_order(data):
 if __name__ == '__main__':
     data = {
     "side": "buy",
-    "symbol": "DOTUSDTPERP"}
-    #send_order(data)
+    "symbol": "ETHUSDTPERP"}
+    send_order(data)
 

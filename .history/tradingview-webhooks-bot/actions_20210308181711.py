@@ -9,7 +9,7 @@ def binance_client(account):
     while True:
         try:
             if account =='aba':
-                with open('tradingview-webhooks-bot/imtradegod.json','r') as token:
+                with open('/Users/derrickwu/Documents/github/tradingview-webhooks-bot/tradingview-webhooks-bot/imtradegod.json','r') as token:
                     file = json.load(token)
                     api_key = file['APIKEY']
                     api_secret = file['PRIVATEKEY']
@@ -76,7 +76,7 @@ def send_order(data):
     binance_derrick = binance_client('derrick')
     binance_aba = binance_client('aba')
     #print('Sending:', data['symbol'], data['type'], data['side'], data['amount'], calc_price(data['price']))
-    side = data['side'].upper()
+    side = data['side']
     symbol = data['symbol'][:-4]
     quantity = amount[symbol]
     print('Sending:',side,symbol,quantity)
@@ -95,6 +95,6 @@ def send_order(data):
 if __name__ == '__main__':
     data = {
     "side": "buy",
-    "symbol": "DOTUSDTPERP"}
-    #send_order(data)
+    "symbol": "ETHUSDTPERP"}
+    send_order(data)
 
